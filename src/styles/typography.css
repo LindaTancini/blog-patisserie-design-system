@@ -3,13 +3,11 @@
 html {
   font-family: "Lato", Arial, Helvetica, sans-serif;
   line-height: 1.6;
-  color: var(--color-text, #3a2e2e);
 }
 
 /* BODY BASE */
 body {
   font-size: var(--font-size-body);
-  background-color: var(--color-bg, #fffaf7);
 }
 
 /* HERO */
@@ -30,7 +28,6 @@ body {
 :where(h6, .font-size-h6) {
   font-family: "Playfair Display", serif;
   margin-bottom: 0.25em;
-  color: var(--color-heading, #2a1f1f);
   text-wrap: balance;
 }
 
