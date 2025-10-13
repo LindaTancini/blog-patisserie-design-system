@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Lato:wght@300;400;700&family=Caveat:wght@400;700&display=swap");
+
+html {
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: var(--color-text, #3a2e2e);
+}
+
+/* BODY BASE */
+body {
+  font-size: var(--font-size-body);
+  background-color: var(--color-bg, #fffaf7);
+}
+
+/* HERO */
+.font-size-hero {
+  font-family: "Playfair Display", serif;
+  font-size: var(--font-size-hero);
+  font-weight: 700;
+  line-height: 1.2;
+  text-wrap: balance;
+}
+
+/* HEADINGS */
+:where(h1, .font-size-h1),
+:where(h2, .font-size-h2),
+:where(h3, .font-size-h3),
+:where(h4, .font-size-h4),
+:where(h5, .font-size-h5),
+:where(h6, .font-size-h6) {
+  font-family: "Playfair Display", serif;
+  margin-bottom: 0.25em;
+  color: var(--color-heading, #2a1f1f);
+  text-wrap: balance;
+}
+
+:where(h1, .font-size-h1) {
+  font-size: var(--font-size-h1);
+}
+:where(h2, .font-size-h2) {
+  font-size: var(--font-size-h2);
+}
+:where(h3, .font-size-h3) {
+  font-size: var(--font-size-h3);
+}
+:where(h4, .font-size-h4) {
+  font-size: var(--font-size-h4);
+}
+:where(h5, .font-size-h5) {
+  font-size: var(--font-size-h5);
+}
+:where(h6, .font-size-h6) {
+  font-size: var(--font-size-h6);
+}
+
+/* PARAGRAPHS */
+:where(p, .font-size-body) {
+  font-family: "Lato", sans-serif;
+  font-size: var(--font-size-body);
+  margin-bottom: 1em;
+}
+
+/* SMALL TEXT */
+:where(small, .font-size-sm) {
+  font-size: var(--font-size-sm);
+}
+
+/* EXTRA SMALL */
+:where(.font-size-xs) {
+  font-size: var(--font-size-xs);
+}
+
+/* HANDWRITTEN DECORATIVE (es. badge o firma) */
+.decorative-text {
+  font-family: "Caveat", cursive;
+  font-size: var(--font-size-deco, 1.25rem);
+}
