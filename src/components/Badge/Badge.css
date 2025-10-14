@@ -1,0 +1,36 @@
+/* Badge generico */
+.badge {
+  position: absolute;
+  top: var(--spacing-sm);
+  right: var(--spacing-sm);
+  background-color: var(--color-lilac-8);
+  color: var(--color-gray-0);
+  font-size: var(--font-size-xs);
+  font-weight: bold;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* sr-only per accessibilità */
+/* Nasconde visivamente ma mantiene accessibile ai lettori di schermo */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Media Queries per Responsività */
+@media screen and (max-width: 480px) {
+  .badge {
+    font-size: var(--font-size-sm);
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
+}
