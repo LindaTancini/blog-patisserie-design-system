@@ -10,9 +10,9 @@ export type BadgeProps = {
 };
 
 // Definizione del componente Badge come funzione React
-export function Badge({ label, arialabel, style }: BadgeProps) {
+export function Badge({ label, style }: BadgeProps) {
   return (
-    <span className="badge" aria-label={arialabel ?? label} style={style}>
+    <span className="badge" style={style}>
       {label} {/* Contenuto testuale del badge */}
       <span className="sr-only">{` Badge: ${label} `}</span>
       {/* Testo alternativo per screen reader */}
