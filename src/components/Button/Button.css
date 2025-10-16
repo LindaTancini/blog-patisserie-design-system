@@ -2,16 +2,15 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  color: var(--color-gray-0);
+  background-color: var(--color-pink-8);
   gap: 8px;
   font-weight: 600;
   border: none;
-  border-radius: 10px;
+  border-radius: 999px;
   cursor: pointer;
   transition: background-color var(--timing) ease;
-  box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.377),
-    4px 4px 12px rgba(0, 0, 0, 0.377);
-  color: #ffffff;
-  background-color: var(--color-pink-7);
+  padding: var(--spacing-sm);
 }
 
 /* Hover */
