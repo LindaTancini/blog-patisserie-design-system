@@ -19,66 +19,66 @@
   --font-size-sm: 0.875rem;
   --font-size-xs: 0.75rem;
 
-  /* HUES */
-  --hue-badge-lilac: 280;
-  --hue-button-pink: 345;
-  --hue-text-gray: 250;
+  /* HUES  */
+  --hue-badge-lilac: 275;
+  --hue-button-pink: 355;
+  --hue-text-gray: 260;
 
-  /* GRIGI (Testo, sfondi e bordi)  */
+  /* GRIGI (sfondi, testo e bordi neutri lavanda-grigi) */
   --color-gray-0: oklch(99% 0.005 var(--hue-text-gray));
-  --color-gray-1: oklch(97% 0.01 var(--hue-text-gray));
-  --color-gray-2: oklch(92% 0.015 var(--hue-text-gray));
-  --color-gray-3: oklch(85% 0.015 var(--hue-text-gray));
-  --color-gray-4: oklch(78% 0.02 var(--hue-text-gray));
-  --color-gray-5: oklch(72% 0.02 var(--hue-text-gray));
-  --color-gray-6: oklch(66% 0.02 var(--hue-text-gray));
-  --color-gray-7: oklch(60% 0.02 var(--hue-text-gray)); /* Testo principale */
-  --color-gray-8: oklch(55% 0.015 var(--hue-text-gray));
-  --color-gray-9: oklch(50% 0.015 var(--hue-text-gray));
-  --color-gray-10: oklch(45% 0.015 var(--hue-text-gray)); /* Testo scuro */
-  --color-gray-11: oklch(40% 0.015 var(--hue-text-gray));
-  --color-gray-12: oklch(35% 0.01 var(--hue-text-gray));
-  --color-gray-13: oklch(28% 0.01 var(--hue-text-gray));
-  --color-gray-14: oklch(22% 0.01 var(--hue-text-gray));
-  --color-gray-15: oklch(15% 0.01 var(--hue-text-gray));
+  --color-gray-1: oklch(97% 0.008 var(--hue-text-gray));
+  --color-gray-2: oklch(93% 0.01 var(--hue-text-gray));
+  --color-gray-3: oklch(88% 0.012 var(--hue-text-gray)); /* sfondo card */
+  --color-gray-4: oklch(82% 0.014 var(--hue-text-gray));
+  --color-gray-5: oklch(76% 0.016 var(--hue-text-gray));
+  --color-gray-6: oklch(70% 0.018 var(--hue-text-gray));
+  --color-gray-7: oklch(62% 0.02 var(--hue-text-gray)); /* testo principale */
+  --color-gray-8: oklch(56% 0.018 var(--hue-text-gray));
+  --color-gray-9: oklch(48% 0.016 var(--hue-text-gray));
+  --color-gray-10: oklch(42% 0.014 var(--hue-text-gray)); /* testo scuro */
+  --color-gray-11: oklch(36% 0.012 var(--hue-text-gray));
+  --color-gray-12: oklch(30% 0.01 var(--hue-text-gray));
+  --color-gray-13: oklch(24% 0.01 var(--hue-text-gray));
+  --color-gray-14: oklch(18% 0.008 var(--hue-text-gray));
+  --color-gray-15: oklch(12% 0.008 var(--hue-text-gray));
 
-  /* ROSA ZUCCHERO (Bottone) */
+  /* ROSA ZUCCHERO (Bottoni, accenti caldi) */
   --color-pink-0: oklch(98% 0.04 var(--hue-button-pink));
-  --color-pink-1: oklch(94% 0.06 var(--hue-button-pink));
-  --color-pink-2: oklch(88% 0.08 var(--hue-button-pink));
-  --color-pink-3: oklch(82% 0.1 var(--hue-button-pink));
-  --color-pink-4: oklch(76% 0.11 var(--hue-button-pink));
-  --color-pink-5: oklch(70% 0.12 var(--hue-button-pink));
-  --color-pink-6: oklch(64% 0.125 var(--hue-button-pink));
+  --color-pink-1: oklch(95% 0.055 var(--hue-button-pink));
+  --color-pink-2: oklch(90% 0.075 var(--hue-button-pink));
+  --color-pink-3: oklch(85% 0.09 var(--hue-button-pink));
+  --color-pink-4: oklch(78% 0.11 var(--hue-button-pink));
+  --color-pink-5: oklch(72% 0.12 var(--hue-button-pink));
+  --color-pink-6: oklch(66% 0.13 var(--hue-button-pink));
   --color-pink-7: oklch(
-    58% 0.13 var(--hue-button-pink)
-  ); /* Colore principale bottone */
-  --color-pink-8: oklch(53% 0.135 var(--hue-button-pink)); /* Colore hover */
-  --color-pink-9: oklch(48% 0.14 var(--hue-button-pink));
-  --color-pink-10: oklch(43% 0.14 var(--hue-button-pink));
-  --color-pink-11: oklch(38% 0.135 var(--hue-button-pink));
-  --color-pink-12: oklch(33% 0.13 var(--hue-button-pink));
-  --color-pink-13: oklch(28% 0.12 var(--hue-button-pink));
-  --color-pink-14: oklch(23% 0.11 var(--hue-button-pink));
-  --color-pink-15: oklch(17% 0.1 var(--hue-button-pink));
+    60% 0.135 var(--hue-button-pink)
+  ); /* colore principale bottone */
+  --color-pink-8: oklch(54% 0.14 var(--hue-button-pink)); /* hover */
+  --color-pink-9: oklch(48% 0.13 var(--hue-button-pink));
+  --color-pink-10: oklch(42% 0.12 var(--hue-button-pink));
+  --color-pink-11: oklch(36% 0.11 var(--hue-button-pink));
+  --color-pink-12: oklch(30% 0.095 var(--hue-button-pink));
+  --color-pink-13: oklch(25% 0.08 var(--hue-button-pink));
+  --color-pink-14: oklch(20% 0.07 var(--hue-button-pink));
+  --color-pink-15: oklch(15% 0.06 var(--hue-button-pink));
 
-  /* LILLA CREMA (Badge) */
+  /* LILLA CREMA (Badge e accenti morbidi) */
   --color-lilac-0: oklch(98% 0.03 var(--hue-badge-lilac));
-  --color-lilac-1: oklch(94% 0.05 var(--hue-badge-lilac));
-  --color-lilac-2: oklch(88% 0.07 var(--hue-badge-lilac));
-  --color-lilac-3: oklch(82% 0.085 var(--hue-badge-lilac));
-  --color-lilac-4: oklch(76% 0.1 var(--hue-badge-lilac));
-  --color-lilac-5: oklch(70% 0.115 var(--hue-badge-lilac));
-  --color-lilac-6: oklch(64% 0.125 var(--hue-badge-lilac));
-  --color-lilac-7: oklch(58% 0.13 var(--hue-badge-lilac));
-  --color-lilac-8: oklch(
-    53% 0.14 var(--hue-badge-lilac)
-  ); /* Principale badge (Vibrante) */
-  --color-lilac-9: oklch(48% 0.145 var(--hue-badge-lilac));
-  --color-lilac-10: oklch(43% 0.15 var(--hue-badge-lilac));
-  --color-lilac-11: oklch(38% 0.145 var(--hue-badge-lilac));
-  --color-lilac-12: oklch(33% 0.14 var(--hue-badge-lilac));
-  --color-lilac-13: oklch(28% 0.125 var(--hue-badge-lilac));
-  --color-lilac-14: oklch(23% 0.11 var(--hue-badge-lilac));
-  --color-lilac-15: oklch(17% 0.09 var(--hue-badge-lilac));
+  --color-lilac-1: oklch(95% 0.045 var(--hue-badge-lilac));
+  --color-lilac-2: oklch(90% 0.06 var(--hue-badge-lilac));
+  --color-lilac-3: oklch(84% 0.075 var(--hue-badge-lilac));
+  --color-lilac-4: oklch(78% 0.09 var(--hue-badge-lilac));
+  --color-lilac-5: oklch(72% 0.1 var(--hue-badge-lilac));
+  --color-lilac-6: oklch(66% 0.11 var(--hue-badge-lilac));
+  --color-lilac-7: oklch(
+    60% 0.12 var(--hue-badge-lilac)
+  ); /* tonalità principale */
+  --color-lilac-8: oklch(54% 0.13 var(--hue-badge-lilac));
+  --color-lilac-9: oklch(48% 0.135 var(--hue-badge-lilac));
+  --color-lilac-10: oklch(43% 0.13 var(--hue-badge-lilac));
+  --color-lilac-11: oklch(38% 0.12 var(--hue-badge-lilac));
+  --color-lilac-12: oklch(33% 0.105 var(--hue-badge-lilac));
+  --color-lilac-13: oklch(27% 0.09 var(--hue-badge-lilac));
+  --color-lilac-14: oklch(22% 0.08 var(--hue-badge-lilac));
+  --color-lilac-15: oklch(16% 0.07 var(--hue-badge-lilac));
 }
