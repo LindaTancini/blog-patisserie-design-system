@@ -2,7 +2,7 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { Card } from "../components/Card/Card";
 import cupcake from "../assets/cupcake.png";
-import biscotto from "../assets/biscotto.png";
+import dolcetticocco from "../assets/dolcetti-al-cocco.png";
 import cheesecake from "../assets/cheesecake.png";
 
 // Configurazione principale della "storia" del componente Card
@@ -46,15 +46,15 @@ export const Cupcake: Story = {
   },
 };
 
-// Storia della Card con biscotto
-export const Biscuit: Story = {
+// Storia della Card con dolcetti al cocco
+export const CoconutSweets: Story = {
   args: {
-    image: biscotto,
+    image: dolcetticocco,
     glutenfree: "Gluten Free",
-    title: "Biscotto al cioccolato",
+    title: "Dolcetti al cocco",
     description:
-      "Un biscotto croccante e friabile con deliziose gocce di cioccolato fondente",
-    onClick: () => console.log("Hai cliccato la Card del Biscotto!"),
+      "Deliziosi dolcetti fatti con farina di cocco e senza glutine, perfetti per ogni occasione",
+    onClick: () => console.log("Hai cliccato la Card dei dolcetti al cocco!"),
   },
 };
 
