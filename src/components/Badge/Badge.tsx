@@ -5,7 +5,7 @@ import "./Badge.css";
 export type BadgeProps = {
   label: string; // Testo visibile all'interno del badge
   arialabel?: string; // Aria-label per l'accessibilità (opzionale)
-  variant?: "default" | "new" | "gluten-free"; // Variante del badge
+  variant?: "default" | "new" | "gluten-free" | "popular"; // Variante del badge
   style?: React.CSSProperties; // Stili CSS personalizzati (opzionale)
 };
 
