@@ -7,6 +7,7 @@ import { Badge } from "../Badge/Badge";
 export type CardProps = {
   image: string; // Immagine del prodotto
   new?: string; // Badge "New" (opzionale)
+  popular?: string; // Badge "Popular" (opzionale)
   glutenfree?: string; // Badge "Gluten Free" (opzionale)
   title: string; // Titolo del prodotto
   description: string; // Mini descrizione del prodotto
@@ -18,6 +19,7 @@ export function Card({
   image,
   new: isNew,
   glutenfree,
+  popular,
   title,
   description,
   onClick,
@@ -44,6 +46,14 @@ export function Card({
           <>
             <Badge label="Gluten Free" variant="gluten-free" />
             <span className="sr-only">Prodotto senza Glutine</span>
+          </>
+        )}
+
+        {/* Badge Popular */}
+        {popular && (
+          <>
+            <Badge label={popular} variant="popular" />
+            <span className="sr-only">Prodotto Popolare</span>
           </>
         )}
       </figure>
