@@ -3,6 +3,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { Card } from "../components/Card/Card";
 import cupcake from "../assets/cupcake.png";
 import biscotto from "../assets/biscotto.png";
+import cheesecake from "../assets/cheesecake.png";
 
 // Configurazione principale della "storia" del componente Card
 const meta: Meta<typeof Card> = {
@@ -14,6 +15,7 @@ const meta: Meta<typeof Card> = {
     image: { control: "text" }, // Campo di testo per la prop "image"
     new: { control: "text" }, // Campo di testo per la prop "new"
     glutenfree: { control: "text" }, // Campo di testo per la prop "glutenfree"
+    popular: { control: "text" }, // Campo di testo per la prop "popular"
     title: { control: "text" }, // Campo di testo per la prop "title"
     description: { control: "text" }, // Campo di testo per la prop "description"
     onClick: { action: "onClick clicked" }, // Aggiunge un'azione per il click sul bottone
@@ -53,5 +55,17 @@ export const Biscuit: Story = {
     description:
       "Un biscotto croccante e friabile con deliziose gocce di cioccolato fondente",
     onClick: () => console.log("Hai cliccato la Card del Biscotto!"),
+  },
+};
+
+// Storia della Card con cheesecake
+export const Cheesecake: Story = {
+  args: {
+    image: cheesecake,
+    popular: "Popular",
+    title: "Cheesecake",
+    description:
+      "Una cheesecake cremosa con una base croccante di biscotti e un topping di frutti di bosco",
+    onClick: () => console.log("Hai cliccato la Card della Cheesecake!"),
   },
 };
