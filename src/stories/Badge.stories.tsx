@@ -13,7 +13,7 @@ const meta: Meta<typeof Badge> = {
     arialabel: { control: "text" }, // Campo di testo per l'aria-label
     variant: {
       control: { type: "radio" }, // Scelta tramite radio button
-      options: ["Default", "Novità", "Senza Glutine"], // Opzioni disponibili
+      options: ["Default", "Novità", "Senza Glutine", "Popolare"], // Opzioni disponibili
     },
   },
   parameters: {
@@ -39,7 +39,7 @@ export const Default: Story = {
     style: { position: "static" }, // Stile per evitare problemi di posizionamento in Storybook
   },
 };
-// Storia di un badge di sconto
+// Storia di un badge di un prodotto nuovo
 export const New: Story = {
   args: {
     label: "New", // Testo del badge
@@ -48,12 +48,23 @@ export const New: Story = {
     style: { position: "static" }, // Stile per evitare problemi di posizionamento in Storybook
   },
 };
-// Storia di un badge di esaurito
+
+// Storia di un badge di un prodotto senza glutine
 export const GlutenFree: Story = {
   args: {
     label: "Gluten Free", // Testo del badge
     arialabel: "Gluten Free", // Aria-label per l’accessibilità
     variant: "gluten-free", // Variante di esaurito
+    style: { position: "static" }, // Stile per evitare problemi di posizionamento in Storybook
+  },
+};
+
+// Storia di un badge di un prodotto popolare
+export const Popular: Story = {
+  args: {
+    label: "Popular", // Testo del badge
+    arialabel: "Popular", // Aria-label per l’accessibilità
+    variant: "popular", // Variante di esaurito
     style: { position: "static" }, // Stile per evitare problemi di posizionamento in Storybook
   },
 };
