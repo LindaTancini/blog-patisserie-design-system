@@ -1,6 +1,7 @@
 // Importazioni
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { Card } from "../components/Card/Card";
+import { Card, CardProps } from "../components/Card/Card";
+import "../styles/wrappercard.css";
 import cupcake from "../assets/cupcake.png";
 import dolcetticocco from "../assets/dolcetti-al-cocco.png";
 import cheesecake from "../assets/cheesecake.png";
@@ -25,7 +26,8 @@ const meta: Meta<typeof Card> = {
       description: {
         component:
           "Il componente `ProductCard` rappresenta una scheda prodotto completa di immagine, titolo, prezzo e descrizione del prodotto. " +
-          "Supporta badge per novità e se il prodotto è Gluten free, ed è progettato per essere accessibile e facilmente integrabile in un design system.",
+          "Supporta badge per novità e se il prodotto è Gluten free, ed è progettato per essere accessibile e facilmente integrabile in un design system. " +
+          "La card può essere girata per mostrare gli ingredienti del prodotto, offrendo un'interazione coinvolgente per l'utente.",
       },
     },
     layout: "centered",
@@ -34,8 +36,18 @@ const meta: Meta<typeof Card> = {
 export default meta;
 type Story = StoryObj<typeof Card>;
 
+// Wrapper per centrare la card
+const CenteredWrapper: React.FC<{ children: React.ReactNode }> = ({
+  children,
+}) => <div className="card-wrapper">{children}</div>;
+
 // Storia della Card con cupcake
 export const Cupcake: Story = {
+  render: (args: CardProps) => (
+    <CenteredWrapper>
+      <Card {...args} />
+    </CenteredWrapper>
+  ),
   args: {
     image: cupcake,
     new: "New",
@@ -48,6 +60,11 @@ export const Cupcake: Story = {
 
 // Storia della Card con dolcetti al cocco
 export const CoconutSweets: Story = {
+  render: (args: CardProps) => (
+    <CenteredWrapper>
+      <Card {...args} />
+    </CenteredWrapper>
+  ),
   args: {
     image: dolcetticocco,
     glutenfree: "Gluten Free",
@@ -60,6 +77,11 @@ export const CoconutSweets: Story = {
 
 // Storia della Card con cheesecake
 export const Cheesecake: Story = {
+  render: (args: CardProps) => (
+    <CenteredWrapper>
+      <Card {...args} />
+    </CenteredWrapper>
+  ),
   args: {
     image: cheesecake,
     popular: "Popular",
