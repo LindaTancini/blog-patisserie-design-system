@@ -3,11 +3,11 @@ import "./Button.css";
 
 // Definizione del tipo delle proprietà accettate dal componente Button
 export type ButtonProps = {
-  label: string; // Testo visibile all'interno del bottone
-  disabled?: boolean; // Indica se il bottone è disabilitato (opzionale, default: false)
-  onClick?: () => void; // Funzione callback eseguita al click (opzionale)
-  arialabel?: string; // Testo alternativo per l’accessibilità (opzionale)
-  size?: "small" | "medium" | "large"; // Dimensione del bottone (opzionale, default: "medium")
+  label: string;
+  disabled?: boolean;
+  onClick?: () => void;
+  arialabel?: string;
+  size?: "small" | "medium" | "large";
 };
 
 // Definizione del componente Button come funzione React

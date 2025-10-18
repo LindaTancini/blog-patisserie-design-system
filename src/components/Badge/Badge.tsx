@@ -3,10 +3,10 @@ import "./Badge.css";
 
 // Definizione del tipo delle proprietà accettate dal componente Badge
 export type BadgeProps = {
-  label: string; // Testo visibile all'interno del badge
-  arialabel?: string; // Aria-label per l'accessibilità (opzionale)
-  variant?: "default" | "new" | "gluten-free" | "popular"; // Variante del badge
-  style?: React.CSSProperties; // Stili CSS personalizzati (opzionale)
+  label: string;
+  arialabel?: string;
+  variant?: "default" | "new" | "gluten-free" | "popular";
+  style?: React.CSSProperties;
 };
 
 // Definizione del componente Badge come funzione React
