@@ -18,7 +18,7 @@ const meta: Meta<typeof Card> = {
     popular: { control: "text" }, // Campo di testo per la prop "popular"
     title: { control: "text" }, // Campo di testo per la prop "title"
     description: { control: "text" }, // Campo di testo per la prop "description"
-    onClick: { action: "onClick clicked" }, // Aggiunge un'azione per il click sul bottone
+    ingredients: { control: "object" }, // Campo oggetto per la prop "ingredients"
   },
   parameters: {
     docs: {
@@ -42,7 +42,7 @@ export const Cupcake: Story = {
     title: "Cupcake alla fragola",
     description:
       "Un cupcake leggero e soffice sormontato da una cremosa glassa alla fragola",
-    onClick: () => console.log("Hai cliccato la Card del Cupcake!"),
+    ingredients: ["Farina", "Zucchero", "Uova", "Burro", "Fragole"],
   },
 };
 
@@ -54,7 +54,7 @@ export const CoconutSweets: Story = {
     title: "Dolcetti al cocco",
     description:
       "Deliziosi dolcetti fatti con farina di cocco e senza glutine, perfetti per ogni occasione",
-    onClick: () => console.log("Hai cliccato la Card dei dolcetti al cocco!"),
+    ingredients: ["Farina di cocco", "Albume", "Zucchero"],
   },
 };
 
@@ -66,6 +66,12 @@ export const Cheesecake: Story = {
     title: "Cheesecake",
     description:
       "Una cheesecake cremosa con una base croccante di biscotti e un topping di frutti di bosco",
-    onClick: () => console.log("Hai cliccato la Card della Cheesecake!"),
+    ingredients: [
+      "Formaggio spalmabile",
+      "Biscotti",
+      "Burro",
+      "Zucchero",
+      "Frutti di bosco",
+    ],
   },
 };
