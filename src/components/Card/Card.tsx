@@ -1,17 +1,18 @@
 // Importazioni
+import React from "react";
 import "./Card.css";
 import { Button } from "../Button/Button";
 import { Badge } from "../Badge/Badge";
 
 // Definizione del tipo delle proprietà accettate dal componente Card
 export type CardProps = {
-  image: string; // Immagine del prodotto
-  new?: string; // Badge "New" (opzionale)
-  popular?: string; // Badge "Popular" (opzionale)
-  glutenfree?: string; // Badge "Gluten Free" (opzionale)
-  title: string; // Titolo del prodotto
-  description: string; // Mini descrizione del prodotto
-  onClick?: () => void; // Funzione callback eseguita al click (opzionale)
+  image: string;
+  new?: string;
+  popular?: string;
+  glutenfree?: string;
+  title: string;
+  description: string;
+  ingredients?: string[];
 };
 
 // Definizione del componente Card come funzione React
@@ -22,56 +23,64 @@ export function Card({
   popular,
   title,
   description,
-  onClick,
+  ingredients = [],
 }: CardProps) {
+  // Definisco lo stato con useState per girare la card al click
+  const [isFlipped, setIsFlipped] = React.useState(false);
+  // Funzione per gestire il click
+  const handleChange = () => setIsFlipped((prev) => !prev);
+  // Struttura della Card
   return (
     <article
-      className="card-container"
+      className={`card-container ${isFlipped ? "is-flipped" : ""}`}
       aria-label={`Prodotto: ${title}, ${description}`}
     >
-      {/* Immagine */}
-      <figure className="card-image">
-        <img src={image} alt={`Immagine di ${title}`} />
+      <div className="card-inner">
+        {/* FRONT */}
+        <div className="card-front">
+          {/* Immagine */}
+          <figure className="card-image">
+            <img src={image} alt={`Immagine di ${title}`} />
+            {/* Badges */}
+            {isNew && <Badge label={isNew} variant="new" />}
+            {glutenfree && <Badge label="Gluten Free" variant="gluten-free" />}
+            {popular && <Badge label={popular} variant="popular" />}
+          </figure>
+          {/* Contenuto della Card */}
+          <div className="card-content">
+            <h3 className="card-title">{title}</h3>
+            <p className="card-description">{description}</p>
+          </div>
+          {/* Footer della Card con Bottone */}
+          <div className="card-footer">
+            <Button
+              label="Visualizza ingredienti"
+              arialabel={`Visualizza ingredienti di ${title}`}
+              size="medium"
+              onClick={handleChange}
+            />
+          </div>
+        </div>
 
-        {/* Badge New */}
-        {isNew && (
-          <>
-            <Badge label={isNew} variant="new" />
-            <span className="sr-only">Novità</span>
-          </>
-        )}
-
-        {/* Badge Glutenfree */}
-        {glutenfree && (
-          <>
-            <Badge label="Gluten Free" variant="gluten-free" />
-            <span className="sr-only">Prodotto senza Glutine</span>
-          </>
-        )}
-
-        {/* Badge Popular */}
-        {popular && (
-          <>
-            <Badge label={popular} variant="popular" />
-            <span className="sr-only">Prodotto Popolare</span>
-          </>
-        )}
-      </figure>
-
-      {/* Contenuto */}
-      <div className="card-content">
-        <h3 className="card-title">{title}</h3>
-        <p className="card-desciption">{description}</p>
-      </div>
-
-      {/* Footer con bottone */}
-      <div className="card-footer">
-        <Button
-          label={"Visualizza ingredienti"}
-          arialabel={onClick ? `Visualizza ingredienti di ${title}` : undefined}
-          size="medium"
-          onClick={onClick}
-        />
+        {/* BACK */}
+        <div className="card-back">
+          <h4>Ingredienti</h4>
+          <ul>
+            {/* Mappiamo gli ingredienti */}
+            {ingredients.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
+          </ul>
+          {/* Footer della Card con Bottone */}
+          <div className="card-footer">
+            <Button
+              label="Torna indietro"
+              arialabel={`Torna alla descrizione di ${title}`}
+              size="medium"
+              onClick={handleChange}
+            />
+          </div>
+        </div>
       </div>
     </article>
   );
