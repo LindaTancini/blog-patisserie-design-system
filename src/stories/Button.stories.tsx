@@ -36,10 +36,10 @@ type Story = StoryObj<ButtonProps>;
 // Storia di default del Button
 export const Default: Story = {
   args: {
-    label: "Button", // Testo del bottone
-    disabled: false, // Abilitato di default
-    arialabel: "Button", // Aria-label per l’accessibilità
-    onClick: () => console.log("Hai cliccato il bottone!"), // Funzione al click
+    label: "Button",
+    disabled: false,
+    arialabel: "Button",
+    onClick: () => console.log("Hai cliccato il bottone!"),
   },
 };
 
@@ -47,9 +47,8 @@ export const Default: Story = {
 export const Disabled: Story = {
   args: {
     label: "Disabled Button",
-    disabled: true, // Bottone disabilitato
+    disabled: true,
     arialabel: "Disabled Button",
-    onClick: () => console.log("Questo bottone è disabilitato!"), // Non verrà eseguito
   },
 };
 

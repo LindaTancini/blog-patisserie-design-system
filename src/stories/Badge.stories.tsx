@@ -33,38 +33,38 @@ type Story = StoryObj<BadgeProps>;
 // Storia di default del Badge
 export const Default: Story = {
   args: {
-    label: "Default Badge", // Testo del badge
-    arialabel: "Default Badge", // Aria-label per l’accessibilità
-    variant: "default", // Variante di default
-    style: { position: "static" }, // Stile per evitare problemi di posizionamento in Storybook
+    label: "Default Badge",
+    arialabel: "Default Badge",
+    variant: "default",
+    style: { position: "static" },
   },
 };
 // Storia di un badge di un prodotto nuovo
 export const New: Story = {
   args: {
-    label: "New", // Testo del badge
-    arialabel: "New", // Aria-label per l’accessibilità
-    variant: "new", // Variante di sconto
-    style: { position: "static" }, // Stile per evitare problemi di posizionamento in Storybook
+    label: "New",
+    arialabel: "New",
+    variant: "new",
+    style: { position: "static" },
   },
 };
 
 // Storia di un badge di un prodotto senza glutine
 export const GlutenFree: Story = {
   args: {
-    label: "Gluten Free", // Testo del badge
-    arialabel: "Gluten Free", // Aria-label per l’accessibilità
-    variant: "gluten-free", // Variante di esaurito
-    style: { position: "static" }, // Stile per evitare problemi di posizionamento in Storybook
+    label: "Gluten Free",
+    arialabel: "Gluten Free",
+    variant: "gluten-free",
+    style: { position: "static" },
   },
 };
 
 // Storia di un badge di un prodotto popolare
 export const Popular: Story = {
   args: {
-    label: "Popular", // Testo del badge
-    arialabel: "Popular", // Aria-label per l’accessibilità
-    variant: "popular", // Variante di esaurito
-    style: { position: "static" }, // Stile per evitare problemi di posizionamento in Storybook
+    label: "Popular",
+    arialabel: "Popular",
+    variant: "popular",
+    style: { position: "static" },
   },
 };
