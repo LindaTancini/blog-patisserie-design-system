@@ -1,58 +1,24 @@
 /* Struttura Card */
-.card-container {
-  width: 300px;
-  max-width: 90vw;
-  perspective: 1000px; /* Abilita l'effetto 3D */
-}
-
-.card-inner {
-  position: relative;
-  width: 100%;
-  height: 450px;
-  transition: transform 0.6s;
-  transform-style: preserve-3d; /* Abilita l'effetto 3D */
-}
-
-.card-container.is-flipped .card-inner {
-  transform: rotateY(180deg);
-}
-
-/* Front della Card */
-.card-front {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  width: 300px;
-  max-width: 90vw;
-  background-color: var(--color-gray-0);
-  border-radius: var(--spacing-lg);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-  padding: var(--spacing-lg);
-  transition: transform var(--timing, 0.3s) ease;
-  z-index: 2;
-  backface-visibility: hidden;
-}
-
-/* Back della Card */
+.card-front,
 .card-back {
-  position: absolute;
-  top: 0;
-  left: 0;
-  backface-visibility: hidden;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  width: 300px;
+  max-width: 90vw;
   background-color: var(--color-gray-0);
   border-radius: var(--spacing-lg);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
   padding: var(--spacing-lg);
   transition: transform var(--timing, 0.3s) ease;
-  /* Flip della Card */
-  transform: rotateY(180deg);
-  overflow-y: auto; /* se gli ingredienti sono tanti */
+}
+
+/* Hover */
+.card-front:hover,
+.card-back:hover {
+  transform: translateY(-6px);
 }
 
 /* Adattamente dell'immagine */
@@ -74,8 +40,7 @@
 }
 
 /* Titolo Card */
-.card-title,
-.card-back h4 {
+.card-title {
   color: var(--color-pink-9);
   font-size: var(--font-size-h3);
   font-weight: 700;
@@ -83,10 +48,9 @@
 }
 
 /* Descrizione Card*/
-.card-description,
-.card-back li {
-  font-size: var(--font-size-md);
-  color: var(--color-gray-8);
+.card-description {
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-7);
   line-height: 1.4;
   margin: var(--spacing-md);
 }
@@ -97,12 +61,16 @@
   justify-content: center;
   padding: var(--spacing-md) 0 var(--spacing-sm);
 }
-
-/* Lista ingredienti */
+/* Retro della Card - Lista Ingredienti */
 .card-back ul {
   padding-left: var(--spacing-lg);
   margin: var(--spacing-sm) 0;
-  width: 100%;
-  max-height: 60%;
-  overflow-y: auto; /* scroll se ci sono troppi ingredienti */
+  padding: 0;
+}
+
+.card-back li {
+  list-style-type: none;
+  color: var(--color-gray-9);
+  padding: var(--spacing-xs) 0;
+  margin-bottom: var(--spacing-xs);
 }
