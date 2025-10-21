@@ -1,7 +1,6 @@
 // Importazioni
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { Card } from "../components/Card/CardFront";
-import "../styles/wrappercard.css";
 import cupcake from "../assets/cupcake.png";
 import dolcetticocco from "../assets/dolcetti-al-cocco.png";
 import cheesecake from "../assets/cheesecake.png";
