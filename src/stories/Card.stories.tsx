@@ -1,6 +1,6 @@
 // Importazioni
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { Card, CardProps } from "../components/Card/Card";
+import { Card } from "../components/Card/CardFront";
 import "../styles/wrappercard.css";
 import cupcake from "../assets/cupcake.png";
 import dolcetticocco from "../assets/dolcetti-al-cocco.png";
@@ -19,7 +19,6 @@ const meta: Meta<typeof Card> = {
     popular: { control: "text" }, // Campo di testo per la prop "popular"
     title: { control: "text" }, // Campo di testo per la prop "title"
     description: { control: "text" }, // Campo di testo per la prop "description"
-    ingredients: { control: "object" }, // Campo oggetto per la prop "ingredients"
   },
   parameters: {
     docs: {
@@ -36,64 +35,35 @@ const meta: Meta<typeof Card> = {
 export default meta;
 type Story = StoryObj<typeof Card>;
 
-// Wrapper per centrare la card
-const CenteredWrapper: React.FC<{ children: React.ReactNode }> = ({
-  children,
-}) => <div className="card-wrapper">{children}</div>;
-
 // Storia della Card con cupcake
 export const Cupcake: Story = {
-  render: (args: CardProps) => (
-    <CenteredWrapper>
-      <Card {...args} />
-    </CenteredWrapper>
-  ),
   args: {
     image: cupcake,
     new: "New",
     title: "Cupcake alla fragola",
     description:
       "Un cupcake leggero e soffice sormontato da una cremosa glassa alla fragola",
-    ingredients: ["Farina", "Zucchero", "Uova", "Burro", "Fragole"],
   },
 };
 
 // Storia della Card con dolcetti al cocco
 export const CoconutSweets: Story = {
-  render: (args: CardProps) => (
-    <CenteredWrapper>
-      <Card {...args} />
-    </CenteredWrapper>
-  ),
   args: {
     image: dolcetticocco,
     glutenfree: "Gluten Free",
     title: "Dolcetti al cocco",
     description:
       "Deliziosi dolcetti fatti con farina di cocco e senza glutine, perfetti per ogni occasione",
-    ingredients: ["Farina di cocco", "Albume", "Zucchero"],
   },
 };
 
 // Storia della Card con cheesecake
 export const Cheesecake: Story = {
-  render: (args: CardProps) => (
-    <CenteredWrapper>
-      <Card {...args} />
-    </CenteredWrapper>
-  ),
   args: {
     image: cheesecake,
     popular: "Popular",
     title: "Cheesecake",
     description:
       "Una cheesecake cremosa con una base croccante di biscotti e un topping di frutti di bosco",
-    ingredients: [
-      "Formaggio spalmabile",
-      "Biscotti",
-      "Burro",
-      "Zucchero",
-      "Frutti di bosco",
-    ],
   },
 };
