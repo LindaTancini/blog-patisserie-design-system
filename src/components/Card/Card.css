@@ -74,3 +74,24 @@
   padding: var(--spacing-xs) 0;
   margin-bottom: var(--spacing-xs);
 }
+
+/* Media Queries per Responsività */
+/* Mobile: max-width 480px */
+@media screen and (max-width: 480px) {
+  .card-container {
+    max-width: 100%;
+    font-size: var(--font-size-sm);
+  }
+
+  .card-title {
+    font-size: var(--font-size-h2);
+  }
+
+  .card-description {
+    font-size: var(--font-size-h3);
+  }
+
+  .card-back li {
+    font-size: var(--font-size-h5);
+  }
+}
