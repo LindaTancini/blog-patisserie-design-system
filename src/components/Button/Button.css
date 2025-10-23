@@ -13,6 +13,11 @@
   padding: var(--spacing-sm);
 }
 
+/* icona nascosta in desktop  e tablet */
+.pink-btn svg {
+  display: none;
+}
+
 /* Hover */
 .pink-btn:hover:not(:disabled) {
   background-color: var(--color-pink-6);
@@ -48,4 +53,37 @@
 .pink-btn-large {
   font-size: var(--font-size-h5);
   padding: var(--spacing-md) var(--spacing-lg);
+}
+
+/* Media Queries per Responsività */
+/* Tablet: max-width 834px */
+@media screen and (max-width: 834px) {
+  .pink-btn {
+    font-size: var(--font-size-body);
+    padding: var(--spacing-sm);
+    justify-content: center;
+  }
+}
+/* Mobile: max-width 320px */
+@media screen and (max-width: 320px) {
+  .pink-btn {
+    font-size: var(--font-size-sm);
+    padding: var(--spacing-sm);
+    justify-content: center;
+  }
+
+  /* Testo nascosto in mobile */
+  .pink-btn .button-text {
+    display: none;
+  }
+
+  /* Icona visibile solo in mobile */
+  .pink-btn svg {
+    display: inline-block;
+    width: var(--font-size-h3);
+    height: var(--font-size-h3);
+    margin: 0;
+    vertical-align: middle;
+    color: var(--color-gray-0);
+  }
 }
