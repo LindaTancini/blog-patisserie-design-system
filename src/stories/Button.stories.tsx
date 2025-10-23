@@ -39,6 +39,7 @@ export const Default: Story = {
     label: "Button",
     disabled: false,
     arialabel: "Button",
+    icon: "book-open",
     onClick: () => console.log("Hai cliccato il bottone!"),
   },
 };
@@ -49,6 +50,7 @@ export const Disabled: Story = {
     label: "Disabled Button",
     disabled: true,
     arialabel: "Disabled Button",
+    icon: "book-open",
   },
 };
 
@@ -57,6 +59,7 @@ export const Small: Story = {
   args: {
     label: "Small Button",
     size: "small",
+    icon: "book-open",
     onClick: () => console.log("Hai cliccato il bottone small!"),
   },
 };
@@ -66,6 +69,7 @@ export const Medium: Story = {
   args: {
     label: "Medium Button",
     size: "medium",
+    icon: "book-open",
     onClick: () => console.log("Hai cliccato il bottone medium!"),
   },
 };
@@ -75,6 +79,7 @@ export const Large: Story = {
   args: {
     label: "Large Button",
     size: "large",
+    icon: "book-open",
     onClick: () => console.log("Hai cliccato il bottone large!"),
   },
 };
