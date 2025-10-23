@@ -71,6 +71,7 @@ export function Card({
           arialabel={onClick ? `Visualizza ingredienti di ${title}` : undefined}
           size="medium"
           onClick={onClick}
+          icon="book-open"
         />
       </div>
     </article>

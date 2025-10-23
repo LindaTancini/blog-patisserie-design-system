@@ -21,7 +21,7 @@ export function CardBack({ title, ingredients }: CardBackProps) {
         </ul>
       </div>
       <div className="card-footer">
-        <Button label="Torna indietro" size="medium" />
+        <Button label="Torna indietro" size="medium" icon="arrow-left" />
       </div>
     </article>
   );
