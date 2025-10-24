@@ -65,7 +65,7 @@ La palette è costruita con tre famiglie principali: **Grigi**, **Rosa Zucchero*
 
 - **Significato**: dolcezza, accoglienza, positività
 - **Ruolo in UI**: utilizzato per i bottoni primari e i testi principali (es. titoli), trasmette un tono amichevole e rassicurante. Supporta testi principali in light/dark mode
-  - Comunica **empatia e delicatezza**, incoraggiando l’interazione senza risultare invadente. Ideale per un’esperienza utente che vuole sembrare **gentile, accessibile e curata nei dettagli**. Perfetto per brand che vogliono evocare **tenerezza, fiducia e calore umano**.
+- Comunica **empatia e delicatezza**, incoraggiando l’interazione senza risultare invadente. Ideale per un’esperienza utente che vuole sembrare **gentile, accessibile e curata nei dettagli**. Perfetto per brand che vogliono evocare **tenerezza, fiducia e calore umano**.
 
 ### 💜 Lilla Crema (Colore badge)
 
