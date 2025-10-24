@@ -47,7 +47,7 @@ export const CoconutSweetsBack: Story = {
 // Storia del retro della card Cheesecake dove mostra i suoi ingredienti di preparazione
 export const CheesecakeBack: Story = {
   args: {
-    title: "Dolcetti al cocco",
+    title: "Cheesecake",
     ingredients: [
       "Formaggio spalmabile",
       "Biscotti",
